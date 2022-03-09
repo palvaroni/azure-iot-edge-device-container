@@ -28,10 +28,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     azure-cli \
     moby-cli \
     moby-engine && \ 
-    apt-get install -y --no-install-recommends iotedge=1.0.0-1 && \ 
+    apt-get install -y --no-install-recommends iotedge && \ 
     rm -rf /var/lib/apt/lists/*
     
-RUN az extension add --name azure-cli-iot-ext
+RUN az extension add --name azure-iot
 
 COPY edge-provision.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/edge-provision.sh
