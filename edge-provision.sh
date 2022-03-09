@@ -26,7 +26,7 @@ agent:
   type: "docker"
   env: {}
   config:
-    image: "mcr.microsoft.com/azureiotedge-agent:1.0"
+    image: "mcr.microsoft.com/azureiotedge-agent:1.1"
     auth: {}
 hostname: $(cat /proc/sys/kernel/hostname)
 connect:
